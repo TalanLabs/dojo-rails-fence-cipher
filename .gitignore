@@ -1,3 +1,5 @@
 rust/target
 python/__pycache__
 haskell/.stack-work
+java/bin
+java/.gradle

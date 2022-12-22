@@ -20,9 +20,17 @@ impl RailFence {
 
     pub fn decode(&self, cipher: &str) -> String {
         let mut indexes : Vec<_>  = self.fence().zip(1..).take(cipher.len()).collect();
+
+
+        // group by fences indexes
         indexes.sort();
 
+        // associate each letter with his fences indexes
+        // the fences indexes correspond to his position after decode
         let mut indexed_text : Vec<_>  = cipher.chars().zip(indexes).map(|(c, (_, i))| (i, c)).collect();
+
+
+        // reorder the letters
         indexed_text.sort();
 
         indexed_text.iter().map(|(_, c)| c ).collect::<String>()

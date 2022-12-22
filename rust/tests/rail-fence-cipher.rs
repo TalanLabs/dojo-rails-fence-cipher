@@ -31,18 +31,21 @@ fn process_decode_case(input: &str, rails: u32, expected: &str) {
 // encode
 
 #[test]
+#[ignore]
 /// encode with two rails
 fn test_encode_with_two_rails() {
     process_encode_case("XOXOXOXOXOXOXOXOXO", 2, "XXXXXXXXXOOOOOOOOO");
 }
 
 #[test]
+#[ignore]
 /// encode with three rails
 fn test_encode_with_three_rails() {
     process_encode_case("WEAREDISCOVEREDFLEEATONCE", 3, "WECRLTEERDSOEEFEAOCAIVDEN");
 }
 
 #[test]
+#[ignore]
 /// encode with ending in the middle
 fn test_encode_with_ending_in_the_middle() {
     process_encode_case("EXERCISES", 4, "ESXIEECSR");
@@ -57,12 +60,14 @@ fn test_decode_with_three_rails() {
 }
 
 #[test]
+#[ignore]
 /// decode with five rails
 fn test_decode_with_five_rails() {
     process_decode_case("EIEXMSMESAORIWSCE", 5, "EXERCISMISAWESOME");
 }
 
 #[test]
+#[ignore]
 /// decode with six rails
 fn test_decode_with_six_rails() {
     process_decode_case(
@@ -73,6 +78,7 @@ fn test_decode_with_six_rails() {
 }
 
 #[test]
+#[ignore]
 /// encode wide characters
 ///
 /// normally unicode is not part of exercism exercises, but in an exercise
